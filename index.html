@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abituriyent Yordamchisi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Abituriyent Yordamchisi</h1>
+        <nav>
+            <button id="ballar-btn" class="active">Kirish Ballari</button>
+            <button id="tahlil-btn">Ballim Orqali Tahlil</button>
+            <button id="forum-btn">Anonim Forum</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="kirish-ballari">
+            <h2>Kirish Ballari</h2>
+            <div class="selection-container">
+                <select id="yil-select">
+                    <option value="">Yilni tanlang</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+                <select id="hudud-select" disabled>
+                    <option value="">Hududni tanlang</option>
+                </select>
+                <select id="yonalish-select" disabled>
+                    <option value="">Yo'nalishni tanlang</option>
+                </select>
+            </div>
+            <div id="ballar-natija"></div>
+        </section>
+
+        <section id="ball-tahlil" class="hidden">
+            <h2>Ballim Orqali Tahlil</h2>
+            <div class="tahlil-container">
+                <input type="number" id="ball-input" placeholder="Balingizni kiriting...">
+                <button id="tahlil-qilish-btn">Tahlil qilish</button>
+            </div>
+            <div id="tahlil-natija"></div>
+        </section>
+
+        <section id="anonim-forum" class="hidden">
+            <h2>Anonim Forum</h2>
+            <div id="forum-messages">
+                </div>
+            <div class="forum-input">
+                <input type="text" id="forum-message-input" placeholder="Xabar yozing...">
+                <button id="send-message-btn">Yuborish</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
